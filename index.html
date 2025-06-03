@@ -3,115 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B2Cred - Soluções Financeiras</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>B2CRED - Excelência em Soluções Financeiras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --light: #ecf0f1;
+            --dourado: #D4AF37;
+            --preto: #000000;
+            --branco: #FFFFFF;
+            --dourado-claro: #F5D992;
         }
         
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Raleway', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: var(--light);
-            color: var(--primary);
+            background-color: var(--branco);
+            color: var(--preto);
         }
         
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
+        /* EFEITO METÁLICO */
+        .metal-text {
+            background: linear-gradient(135deg, var(--dourado), #F5D992);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        /* BOTÕES LUXUOSOS */
+        .btn-luxo {
+            background: var(--dourado);
+            color: var(--preto);
+            padding: 16px 45px;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
         }
         
-        .cta-button {
-            background-color: var(--secondary);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
-            transition: all 0.3s;
-        }
-        
-        .cta-button:hover {
+        .btn-luxo:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
         }
         
-        footer {
-            background-color: var(--primary);
-            color: white;
+        .btn-luxo::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255,255,255,0.3) 0%,
+                rgba(255,255,255,0) 60%
+            );
+            transform: rotate(30deg);
+        }
+        
+        /* HEADER SOFISTICADO */
+        header {
+            background: var(--preto);
+            color: var(--branco);
+            padding: 150px 0 100px;
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
+            position: relative;
+        }
+        
+        header::before {
+            content: '';
+            background: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            opacity: 0.15;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        header h1 {
+            font-size: 4.5rem;
+            margin: 0;
+        }
+        
+        /* SERVIÇOS ELEGANTES */
+        .servico-card {
+            background: var(--branco);
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .servico-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .servico-icon {
+            background: var(--preto);
+            color: var(--dourado);
+            font-size: 2.5rem;
+            padding: 30px;
         }
     </style>
 </head>
 <body>
+    <!-- HERO LUXUOSO -->
     <header>
         <div class="container">
-            <h1><i class="fas fa-chart-line"></i> B2Cred</h1>
-            <p>Soluções inteligentes para seu crescimento financeiro</p>
-            <a href="#contact" class="cta-button">Fale Conosco</a>
+            <h1 class="metal-text">B2CRED</h1>
+            <p style="font-size: 1.5rem; letter-spacing: 3px; margin-bottom: 40px;">SOLUÇÕES FINANCEIRAS</p>
+            <a href="#servicos" class="btn-luxo">
+                <i class="fas fa-chevron-down"></i> CONHEÇA NOSSOS SERVIÇOS
+            </a>
         </div>
     </header>
-
-    <main class="container">
-        <section id="services">
-            <h2>Nossos Serviços</h2>
-            <div class="services-grid">
-                <!-- Adicione seus serviços aqui -->
-                <div class="service-card">
-                    <i class="fas fa-hand-holding-usd fa-3x"></i>
-                    <h3>Crédito Corporativo</h3>
-                    <p>Soluções sob medida para seu negócio</p>
+    
+    <!-- SERVIÇOS PREMIUM -->
+    <section id="servicos" style="padding: 100px 0; background: var(--branco);">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 60px;" class="metal-text">NOSSOS SERVIÇOS EXCLUSIVOS</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                <!-- SERVIÇO 1 -->
+                <div class="servico-card">
+                    <div class="servico-icon" style="text-align: center;">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <div style="padding: 30px;">
+                        <h3 style="color: var(--dourado); margin-top: 0;">Crédito Corporativo</h3>
+                        <p style="color: var(--preto);">Linhas exclusivas para empresas com taxas diferenciadas e prazos estendidos.</p>
+                        <a href="#" class="btn-luxo" style="display: inline-block; margin-top: 20px; padding: 12px 30px; background: var(--preto); color: var(--dourado);">SAIBA MAIS</a>
+                    </div>
                 </div>
+                
+                <!-- Adicione mais 2 serviços aqui -->
             </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contato</h2>
-            <form>
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu E-mail" required>
-                <textarea placeholder="Sua Mensagem"></textarea>
-                <button type="submit" class="cta-button">Enviar</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2023 B2Cred - Todos os direitos reservados</p>
-        <div class="social">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
         </div>
-    </footer>
-
+    </section>
+    
+    <!-- CALCULADORA DE CRÉDITO -->
+    <section style="padding: 100px 0; background: var(--preto); color: var(--branco);">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 60px;" class="metal-text">SIMULADOR FINANCEIRO</h2>
+            
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 50px; border-radius: 15px; border: 1px solid var(--dourado);">
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 15px; color: var(--dourado-claro);">Valor Desejado</label>
+                    <input type="range" min="10000" max="1000000" step="10000" value="250000" 
+                           style="width: 100%; height: 6px; -webkit-appearance: none; background: var(--dourado); border-radius: 3px; outline: none;">
+                    <output style="display: block; text-align: center; font-size: 2.5rem; margin-top: 15px;" class="metal-text">R$ 250.000</output>
+                </div>
+                
+                <button class="btn-luxo" style="display: block; width: 100%; margin-top: 40px;">
+                    <i class="fas fa-calculator"></i> SIMULAR CRÉDITO
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FORMULÁRIO ELEGANTE -->
+    <section id="contato" style="padding: 100px 0; background: var(--branco);">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 60px;" class="metal-text">FALE CONOSCO</h2>
+            
+            <form style="background: var(--branco); padding: 50px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.1);">
+                <div style="margin-bottom: 25px;">
+                    <input type="text" placeholder="Seu Nome" style="width: 100%; padding: 15px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 25px;">
+                    <input type="email" placeholder="Seu E-mail" style="width: 100%; padding: 15px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 30px;">
+                    <textarea placeholder="Sua Mensagem" style="width: 100%; padding: 15px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; min-height: 150px; font-size: 1rem;"></textarea>
+                </div>
+                
+                <button type="submit" class="btn-luxo" style="display: block; width: 100%;">
+                    <i class="fas fa-paper-plane"></i> ENVIAR MENSAGEM
+                </button>
+            </form>
+        </div>
+    </section>
+    
     <script>
-        // Efeito smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        // INTERATIVIDADE DA CALCULADORA
+        document.querySelector('input[type="range"]').addEventListener('input', function() {
+            const valor = parseInt(this.value);
+            document.querySelector('output').textContent = 'R$ ' + valor.toLocaleString('pt-BR');
         });
+        
+        // EFEITO DE DIGITAÇÃO NO TÍTULO
+        const titulo = document.querySelector('header h1');
+        const textoOriginal = titulo.textContent;
+        titulo.textContent = '';
+        
+        let i = 0;
+        const typingEffect = setInterval(() => {
+            if (i < textoOriginal.length) {
+                titulo.textContent += textoOriginal.charAt(i);
+                i++;
+            } else {
+                clearInterval(typingEffect);
+            }
+        }, 150);
     </script>
 </body>
 </html>
