@@ -1,10 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Meu Site Financeiro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2Cred - Soluções Financeiras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #ecf0f1;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--primary);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .cta-button {
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bem-vindo ao Meu Site!</h1>
-    <p>Conteúdo será adicionado aqui.</p>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-chart-line"></i> B2Cred</h1>
+            <p>Soluções inteligentes para seu crescimento financeiro</p>
+            <a href="#contact" class="cta-button">Fale Conosco</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="services">
+            <h2>Nossos Serviços</h2>
+            <div class="services-grid">
+                <!-- Adicione seus serviços aqui -->
+                <div class="service-card">
+                    <i class="fas fa-hand-holding-usd fa-3x"></i>
+                    <h3>Crédito Corporativo</h3>
+                    <p>Soluções sob medida para seu negócio</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contato</h2>
+            <form>
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu E-mail" required>
+                <textarea placeholder="Sua Mensagem"></textarea>
+                <button type="submit" class="cta-button">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 B2Cred - Todos os direitos reservados</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
